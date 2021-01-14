@@ -50,5 +50,11 @@ defmodule AnneWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
+  plug :say_hi
   plug AnneWeb.Router
+
+  def say_hi(conn, _opts) do
+    IO.puts("Hi 👋")
+    conn
+  end
 end
