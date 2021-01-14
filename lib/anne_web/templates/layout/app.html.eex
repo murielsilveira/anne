@@ -3,6 +3,7 @@
   <p><%= function_from_view() %></p>
   <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
   <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+  <%= @inner_content %>
   <div>
     <table>
       <tr>
@@ -23,5 +24,4 @@
     <% end %>
     </table>
   </div>
-  <%= @inner_content %>
 </main>

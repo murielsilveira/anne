@@ -20,6 +20,7 @@ defmodule AnneWeb.Router do
 
     live "/", PageLive, :index
     get "/dashboard", DashboardController, :index
+    resources "/users", UserController
   end
 
   # Other scopes may use custom stacks.
