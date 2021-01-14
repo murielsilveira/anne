@@ -4,24 +4,4 @@
   <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
   <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
   <%= @inner_content %>
-  <div>
-    <table>
-      <tr>
-        <th>Number</th>
-        <th>Power</th>
-      </tr>
-    <%= for number <- 1..10 do%>
-      <tr>
-        <td><%= number %></td>
-        <td>
-        <%= if number == number * number do %>
-          <%= number * number %> (same)
-        <% else %>
-          <%= number * number %>
-        <% end %>
-        </td>
-      </tr>
-    <% end %>
-    </table>
-  </div>
 </main>
