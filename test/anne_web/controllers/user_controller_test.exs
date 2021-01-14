@@ -3,7 +3,7 @@ defmodule AnneWeb.UserControllerTest do
 
   alias Anne.Accounts
 
-  @create_attrs %{name: "some name", username: "some username"}
+  @create_attrs %{name: "some name", username: "some username", credential: %{email: "mail@test.com"}}
   @update_attrs %{name: "some updated name", username: "some updated username"}
   @invalid_attrs %{name: nil, username: nil}
 

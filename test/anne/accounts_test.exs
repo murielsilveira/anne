@@ -6,7 +6,7 @@ defmodule Anne.AccountsTest do
   describe "users" do
     alias Anne.Accounts.User
 
-    @valid_attrs %{name: "some name", username: "some username"}
+    @valid_attrs %{name: "some name", username: "some username", credential: %{email: "mail@test.com"}}
     @update_attrs %{name: "some updated name", username: "some updated username"}
     @invalid_attrs %{name: nil, username: nil}
 
