@@ -18,6 +18,7 @@ defmodule AnneWeb.Router do
     pipe_through :browser
 
     live "/", PageLive, :index
+    get "/dashboard", DashboardController, :index
   end
 
   # Other scopes may use custom stacks.
