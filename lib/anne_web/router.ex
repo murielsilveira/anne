@@ -38,7 +38,7 @@ defmodule AnneWeb.Router do
 
     scope "/" do
       pipe_through :browser
-      live_dashboard "/dashboard", metrics: AnneWeb.Telemetry
+      live_dashboard "/telemetry", metrics: AnneWeb.Telemetry
     end
   end
 end
