@@ -8,6 +8,7 @@ defmodule AnneWeb.Router do
     plug :put_root_layout, {AnneWeb.LayoutView, :root}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
+    plug AnneWeb.Plugs.Locale, "en"
   end
 
   pipeline :api do
