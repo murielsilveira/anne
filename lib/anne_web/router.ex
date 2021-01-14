@@ -23,9 +23,11 @@ defmodule AnneWeb.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", AnneWeb do
-  #   pipe_through :api
-  # end
+  scope "/api", AnneWeb.Api, as: :api do
+    pipe_through :api
+
+    get "/leaves", LeavesController, :index
+  end
 
   # Enables LiveDashboard only for development
   #
